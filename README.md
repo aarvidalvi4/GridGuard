@@ -1,123 +1,79 @@
-<<<<<<< HEAD
-# GridGuard — Setup Guide (XAMPP + Node.js)
+# GridGuard 🌱
 
-## What you need
-- XAMPP installed with MySQL running (port 3306)
-- Node.js installed (https://nodejs.org — download LTS)
+A browser-based Neighborhood Energy Simulation Platform that helps users visualize how renewable energy adoption and EV charging affect local power grid stability in real time.
+
+GridGuard enables users to simulate energy demand, analyze grid stress, and understand sustainability impacts through interactive visualizations.
 
 ---
 
-## Step 1 — Folder structure
+## 🚀 Live Demo & Deployments
 
-Place the files like this:
+- **Frontend (Vercel):** [https://grid-guard-inky.vercel.app/](https://grid-guard-inky.vercel.app/)
+- **Backend (Railway):** Hosted Node.js API server
 
-```
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML5 & CSS3
+- JavaScript (Vanilla)
+- Chart.js (for real-time visualizations)
+
+### Backend & Database
+- Node.js & Express.js
+- Supabase PostgreSQL
+- Supabase Auth (JWT-based authentication)
+- bcrypt (for fallback custom password hashing)
+
+### Deployment
+- **Frontend:** Vercel
+- **Backend API:** Railway
+- **Database + Auth:** Supabase
+
+---
+
+## 🧱 Project Structure
+
+```text
 gridguard/
+│
 ├── frontend/
-│   └── index.html
-└── backend/
-    ├── server.js
-    ├── db.js
-    ├── .env
-    ├── package.json
-    └── routes/
-        ├── auth.js
-        ├── scenarios.js
-        └── bill.js
-```
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   ├── assets/
+│   └── pages/
+│
+├── backend/
+│   ├── server.js
+│   ├── db.js
+│   ├── package.json
+│   ├── .env
+│   └── routes/
+│       ├── auth.js
+│       ├── scenarios.js
+│       └── bill.js
+│
+└── README.md
 
----
-
-## Step 2 — Install packages
-
-Open Command Prompt inside the backend folder:
-
-```
-cd gridguard/backend
-npm install
-```
-
-That installs all packages from package.json automatically.
-
----
-
-## Step 3 — Check .env settings
-
-Open .env — the defaults work for a standard XAMPP install:
-
-```
-PORT=3000
-JWT_SECRET=gridguard_secret_key_change_this_before_demo
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=gridguard
-```
-
-If you set a password for MySQL root in XAMPP, add it to DB_PASSWORD.
-
----
-
-## Step 4 — Start XAMPP MySQL
-
-Open XAMPP Control Panel and click Start next to MySQL.
-You do NOT need to create the database manually — the backend creates it automatically.
-
----
-
-## Step 5 — Start the backend
-
-In Command Prompt inside the backend folder:
-
-```
-node server.js
-```
-
-You should see:
-  MySQL connected. Tables ready.
-  GridGuard running at http://localhost:3000
-
----
-
-## Step 6 — Open the app
-
-Go to http://localhost:3000 in your browser.
-
----
-
-## Verify the database was created
-
-1. Open XAMPP and click Admin next to MySQL (opens phpMyAdmin)
-2. You should see a database called gridguard on the left
-3. Inside it: gridguard_users, gridguard_scenarios, gridguard_bills
-
----
-
-## Demo account
-
-Register any account through the app, or use the demo button which logs in with:
-  Email:    demo@gridguard.app
-  Password: demo123
-
-Note: the demo account must be registered first through the Sign Up page.
-
----
-
-## API endpoints
-
-| Method | Endpoint | Auth |
-|--------|----------|------|
-| POST | /api/auth/register | No |
-| POST | /api/auth/login | No |
-| GET  | /api/auth/me | Yes |
-| POST | /api/scenarios | Yes |
-| GET  | /api/scenarios | Yes |
-| DELETE | /api/scenarios/:id | Yes |
-| POST | /api/bill | Yes |
-| GET  | /api/bill | Yes |
-| GET  | /api/bill/:month | Yes |
-| GET  | /api/health | No |
-=======
-# GridGuard
->>>>>>> d357388790083f50f95590051238ddde80af3a9f
+## System Architecture
+[ User ]
+                  │
+                  ▼
+          Frontend (Vercel)
+                  │
+                  │ Supabase JS Client (Auth + Data Requests)
+                  ▼
+      Supabase Backend Services
+  (PostgreSQL + Authentication + RLS)
+                  │
+                  ▼
+    Node.js / Express Backend (Railway)
+                  │
+                  ├── Auth Verification (Supabase JWT validation)
+                  ├── Scenario Processing
+                  └── Bill Analysis Engine
+                  │
+                  ▼
+       [ Response to Frontend ]
