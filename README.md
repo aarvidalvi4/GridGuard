@@ -8,18 +8,18 @@ GridGuard enables users to simulate energy demand, analyze grid stress, and unde
 
 ## Table of Contents
 
-- [🚀 Live Demo & Deployments](#-live-demo--deployments)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🧱 Project Structure](#-project-structure)
-- [📋 System Architecture](#-system-architecture)
-- [⚙️ Installation & Setup](#️-installation--setup)
-- [🔐 Demo Account](#-demo-account)
-- [📡 API Endpoints](#-api-endpoints)
-- [🐛 Troubleshooting](#-troubleshooting)
+- [ Live Demo & Deployments](#-live-demo--deployments)
+- [ Tech Stack](#️-tech-stack)
+- [ Project Structure](#-project-structure)
+- [ System Architecture](#-system-architecture)
+- [ Installation & Setup](#️-installation--setup)
+- [ Demo Account](#-demo-account)
+- [ API Endpoints](#-api-endpoints)
+- [ Troubleshooting](#-troubleshooting)
 
 ---
 
-## 🚀 Live Demo & Deployments
+##  Live Demo & Deployments
 
 - **Frontend (Vercel):** [https://grid-guard-inky.vercel.app/](https://grid-guard-inky.vercel.app/)
 - **Backend (Railway):** Hosted Node.js API server
@@ -46,7 +46,7 @@ GridGuard enables users to simulate energy demand, analyze grid stress, and unde
 
 ---
 
-## 🧱 Project Structure
+##  Project Structure
 
 ```
 gridguard/
@@ -73,7 +73,7 @@ gridguard/
 
 ---
 
-## 📋 System Architecture
+##  System Architecture
 
 ```
       [ User ]
@@ -99,7 +99,7 @@ gridguard/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 
@@ -148,7 +148,7 @@ Go to `http://localhost:3000` in your browser.
 
 ---
 
-## 🔐 Demo Account
+##  Demo Account
 
 Register a new account through the app, or use the demo button which logs in with:
 
@@ -176,7 +176,7 @@ Register a new account through the app, or use the demo button which logs in wit
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Port 3000 Already in Use
 Change the `PORT` value in `.env` to an available port (e.g., 3001) and restart the backend.
