@@ -123,13 +123,10 @@ Create or update the `.env` file in the `backend/` folder with your Supabase cre
 
 ```env
 PORT=3000
-JWT_SECRET=gridguard_secret_key_change_this
-
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_SERVICE_KEY=your_supabase_service_key_here
+SUPABASE_URL=https://esxikgqwgtdrhxxasbwa.supabase.co
+SUPABASE_SERVICE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVzeGlrZ3F3Z3Rkcmh4eGFzYndhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MjIwMDI2MCwiZXhwIjoyMDk3Nzc2MjYwfQ.PomHNZa9ZT7qdb8d6OGOiQJ7cVz7wLMGNOd4WvVrgtI
 ```
 
-**Important:** Replace the placeholder values with your actual Supabase project credentials.
 
 ### Step 3: Start the Backend
 
