@@ -26,7 +26,7 @@ GridGuard enables users to simulate energy demand, analyze grid stress, and unde
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - HTML5 & CSS3
@@ -159,7 +159,7 @@ Register a new account through the app, or use the demo button which logs in wit
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint | Auth Required |
 |--------|----------|---|
