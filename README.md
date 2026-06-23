@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GridGuard — Setup Guide (XAMPP + Node.js)
 
 ## What you need
@@ -117,3 +118,6 @@ Note: the demo account must be registered first through the Sign Up page.
 | GET  | /api/bill | Yes |
 | GET  | /api/bill/:month | Yes |
 | GET  | /api/health | No |
+=======
+# GridGuard
+>>>>>>> d357388790083f50f95590051238ddde80af3a9f
